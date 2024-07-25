@@ -1,0 +1,2 @@
+run:
+	godotenv go run .
