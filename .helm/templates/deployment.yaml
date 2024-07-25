@@ -29,3 +29,7 @@ spec:
               path: /
               port: 3000
             initialDelaySeconds: 5
+          {{ if .Values.env }}
+          env:
+            {{- toYaml .Values.env | nindent 12 }}
+          {{ end }}

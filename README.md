@@ -2,5 +2,5 @@
 
 ```bash
 # Install this program to kubernetes via helm
-helm install deploy .helm
+helm upgrade --install deploy .helm
 ```
