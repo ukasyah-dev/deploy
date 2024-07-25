@@ -13,6 +13,10 @@ var httpPort = env.GetIntDefault("HTTP_PORT", 3000)
 func main() {
 	app := fiber.New()
 
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.JSON(fiber.Map{"status": "ok"})
+	})
+
 	app.Post("/:name", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"message": "TODO: Deploy " + c.Params("name")})
 	})
