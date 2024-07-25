@@ -2,3 +2,6 @@ image:
   tag: main
 ingress:
   host: deploy.ukasyah.dev
+env:
+  - name: IN_CLUSTER
+    value: "true"
